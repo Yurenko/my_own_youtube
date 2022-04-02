@@ -1,10 +1,12 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { Header } from "./components/Header/Header";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
   return (
-    <div className="App">
-       <Header />
+    <div className={styles.container}>
+      <Header />
+      <SideBar/>
     </div>
   );
 }
