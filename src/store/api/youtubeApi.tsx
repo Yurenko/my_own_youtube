@@ -7,7 +7,7 @@ const instance = axios.create({
 export const firstRecomendedVideos = () => {
   return instance
     .get(
-      `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=9&regionCode=UA&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+      `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=UA&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
     )
     .then((res) => res.data.items);
 };

@@ -1,7 +1,8 @@
 import Avatar from "@material-ui/core/Avatar";
+import { IVideoCards } from "../RecommendedVideos/RecommendedVideos";
 import styles from "./VideoCard.module.css";
 
-const VideoCard = ({
+const VideoCard: React.FC<IVideoCards> = ({
   image,
   title,
   channel,
