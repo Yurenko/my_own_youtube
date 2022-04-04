@@ -1,0 +1,50 @@
+.videoinfoStats,
+.videoinfoChannel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.videoinfoHeadline > h1 {
+  font-weight: 400;
+  font-size: large;
+}
+
+.videoinfoStats > p {
+  font-size: medium;
+  color: gray;
+}
+
+.videoinfoLikes > * {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.videoinfoLikes,
+.videoinfoChannel > div {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.videoinfoChannelinfo {
+  padding-left: 16px;
+}
+
+.videoinfoChanneltitle {
+  font-size: medium;
+  margin: 2px;
+}
+
+.videoinfoChannelsubs {
+  color: gray;
+  font-size: small;
+  margin: 0;
+}
