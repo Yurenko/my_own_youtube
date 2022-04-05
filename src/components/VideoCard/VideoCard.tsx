@@ -20,7 +20,7 @@ const VideoCard: React.FC<IVideoCards> = ({
           src={channelImage}
         />
         <div className={styles.videocardText}>
-          <h4>{title}</h4>
+          <h4>{title.length > 48 ? `${title.slice(0, 40)}...` : title}</h4>
           <p>{channel}</p>
           <p>
             {views} views • {timestamp}

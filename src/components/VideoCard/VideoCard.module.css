@@ -14,7 +14,8 @@
 }
 
 .videocardText {
-  margin-left: 15px;
+  margin-right: 24px;
+  height: 118px;
 }
 
 .videocardText > h4 {
@@ -28,8 +29,10 @@
 }
 
 .videocardAvatar {
-  height: 30px !important;
-  width: 30px !important;
+  height: 36px !important;
+  width: 36px !important;
+  margin-top: 12px;
+  margin-right: 12px;
 }
 
 .videocardText > * {
