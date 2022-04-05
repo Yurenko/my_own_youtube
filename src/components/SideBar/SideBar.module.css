@@ -1,5 +1,37 @@
 .sidebar {
   flex: 0.2;
+  padding: 12px 0;
+  /* width: 240px; */
+  overflow-y: hidden;
+  /* position: absolute;
+  top: 56px;
+  bottom: 0; */
+}
+
+.sidebar:hover {
+  overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.subtitle {
+  padding: 8px 24px;
+  margin: 0;
+  font-weight: 500;
+  color: rgb(155, 155, 155);
 }
 
 .sidebar > hr {
