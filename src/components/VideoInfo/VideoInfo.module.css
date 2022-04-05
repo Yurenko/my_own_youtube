@@ -43,6 +43,12 @@ hr {
   margin: 2px;
 }
 
+.description {
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Fira Sans" sans-serif;
+}
+
 .videoinfoChannelsubs {
   color: gray;
   font-size: small;

@@ -70,7 +70,7 @@ const VideoInfo: React.FC<IVideoInfo> = ({
         </div>
       </div>
       <div className={styles.videoinfoChanneldesc}>
-        <p>{descriptionShort}</p>
+        <pre className={styles.description}>{descriptionShort}</pre>
         <Button variant="text" onClick={hendlerInfoVideo}>
           show {isHide}
         </Button>
