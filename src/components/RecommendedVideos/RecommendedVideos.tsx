@@ -11,6 +11,7 @@ import VideoSkeleton from "../VideoCard/VideoSkeleton";
 import { UseAppSelector } from "../../hook/reduxHook";
 import { createVideoCards } from "../../store/RecommendedVideosReducer/RecommendedThunk";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export interface IVideoCards {
   videoId?: string;
@@ -55,15 +56,21 @@ const RecommendedVideos = () => {
           (item: IVideoCards) => (
             <>
               {item ? (
-                <VideoCard
+                <Link
                   key={item.videoId}
-                  title={item.title}
-                  image={item.image}
-                  views={item.views}
-                  timestamp={item.timestamp}
-                  channel={item.channel}
-                  channelImage={item.channelImage}
-                />
+                  to={`/video/${item.videoId}`}
+                  className={styles.linkVideo}
+                >
+                  <VideoCard
+                    key={item.videoId}
+                    title={item.title}
+                    image={item.image}
+                    views={item.views}
+                    timestamp={item.timestamp}
+                    channel={item.channel}
+                    channelImage={item.channelImage}
+                  />
+                </Link>
               ) : (
                 <VideoSkeleton />
               )}

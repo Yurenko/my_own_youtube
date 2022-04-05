@@ -3,6 +3,31 @@
   background-color: #f9f9f9;
   padding: 20px 20px;
   padding-bottom: 0;
+  overflow: scroll;
+  /* position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 240px;
+  right: 0; */
+}
+
+.recommendedvideos::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+.recommendedvideos::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.recommendedvideos::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.linkVideo {
+  text-decoration: none;
+  color: #000;
 }
 
 .recommendedVideos > h2 {
