@@ -17,3 +17,15 @@ export const videoCardsAPI = (channelId: string) => {
     `channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 };
+
+export const videoInfoAPI = (videoId?: string) => {
+  return instance.get(
+    `videos?part=snippet%2C%20statistics&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+};
+
+export const videoChanelAPI = (channelId: string) => {
+  return instance.get(
+    `channels?part=snippet%2C%20statistics&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+};

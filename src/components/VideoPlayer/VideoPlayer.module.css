@@ -1,0 +1,31 @@
+.videoplayer {
+  display: flex;
+  justify-content: center;
+}
+
+.videoplayerVideodetails {
+  flex: 0.8;
+}
+
+.videoplayerVideo,
+.videoplayerVideoinfo {
+  margin: 3% 5% 5% 8%;
+}
+
+.videoplayerSuggested {
+  flex: 0.2;
+  margin-top: 0 !important;
+}
+
+.videoplayerVideoinfo {
+  flex-direction: row;
+}
+
+.videoinfoChannelinfo {
+  margin-left: 16px;
+}
+
+.videoinfoChanneldesc {
+  color: gray;
+  font-size: small;
+}
