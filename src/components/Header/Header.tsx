@@ -6,15 +6,16 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import Avatar from "@material-ui/core/Avatar";
 import styles from "./Header.module.css";
 import { ReactComponent as Youtube } from "../../assets/icon/youtube.svg";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.headerLeft}>
         <MenuIcon style={{ padding: "8px" }} />
-        <div className={styles.headerLogo}>
+        <NavLink to="/" className={styles.headerLogo}>
           <Youtube />
-        </div>
+        </NavLink>
       </div>
 
       <div className={styles.headerCenter}>
