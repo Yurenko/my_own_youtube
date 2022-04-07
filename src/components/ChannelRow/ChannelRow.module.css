@@ -1,0 +1,31 @@
+.channelrow {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.channelroText {
+  display: flex;
+  flex-direction: column;
+}
+
+.channelroText > p {
+  color: #606060;
+  font-size: small !important;
+}
+
+.channelrowLogo {
+  height: 120px !important;
+  width: 120px !important;
+  margin: 10px 60px;
+}
+
+.channelroText > * {
+  margin: 2px 2px;
+}
+
+.channelroText > h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
