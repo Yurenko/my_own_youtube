@@ -29,3 +29,13 @@ export const videoChanelAPI = (channelId: string) => {
     `channels?part=snippet%2C%20statistics&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 };
+
+export const searchVideo = (
+  result: number,
+  type: string,
+  searchQuery?: string
+) => {
+  return instance.get(
+    `search?part=snippet&maxResults=${result}&type=${type}&q=${searchQuery}&safeSearch=none&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+};

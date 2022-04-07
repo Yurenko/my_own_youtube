@@ -5,6 +5,7 @@ import SideBar from "./components/SideBar/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import { Fragment } from "react";
+import SearchPage from "./components/SearchPage/SearchPage";
 
 function App() {
   return (
@@ -14,7 +15,15 @@ function App() {
           <Header />
           <Routes>
             <Route path="/video/:videoId" element={<VideoPlayer />} />
-            <Route path="/search/:searchQuery" element={<SideBar />} />
+            <Route
+              path="/search/:searchQuery"
+              element={
+                <div className={styles.appMainpage}>
+                  <SideBar />
+                  <SearchPage />
+                </div>
+              }
+            />
             <Route
               path="/"
               element={
