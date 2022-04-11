@@ -1,0 +1,40 @@
+.tabsContainer {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.tabsItem {
+  display: inline-block;
+  text-decoration: none;
+  color: #606060;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3.5;
+  padding: 0 32px;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+.tabsList::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #030303;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.selected {
+  color: #030303;
+}
+
+.selected::after {
+  opacity: 1;
+}
