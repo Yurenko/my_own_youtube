@@ -7,8 +7,27 @@ import Avatar from "@material-ui/core/Avatar";
 import styles from "./Header.module.css";
 import { ReactComponent as Youtube } from "../../assets/icon/youtube.svg";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export function Header() {
+  const navigate = useNavigate();
+  const [textSeatch, setTextSearch] = useState("");
+
+  const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTextSearch(event.target.value);
+  };
+
+  const onEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      navigate(`/search/${textSeatch}`);
+    }
+  };
+
+  const handleSearchClick = () => {
+    navigate(`/search/${textSeatch}`);
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.headerLeft}>
@@ -23,8 +42,11 @@ export function Header() {
           type="text"
           className={styles.headerCenterInput}
           placeholder="Search"
+          value={textSeatch}
+          onChange={handleSearchInput}
+          onKeyUp={onEnter}
         />
-        <div className={styles.headerSearchbutton}>
+        <div className={styles.headerSearchbutton} onClick={handleSearchClick}>
           <SearchIcon />
         </div>
       </div>
