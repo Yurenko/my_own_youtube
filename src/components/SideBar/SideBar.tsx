@@ -19,24 +19,28 @@ import FlagOutlinedIcon from "@material-ui/icons/FlagOutlined";
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
-      <SideBarRow selected Icon={HomeIcon} title="Home" />
-      <SideBarRow Icon={WhatshotIcon} title="Trending" />
-      <SideBarRow Icon={SubscriptionsIcon} title="Subscription" />
+      <SideBarRow Icon={HomeIcon} title="Home" path="/" />
+      <SideBarRow Icon={WhatshotIcon} title="Trending" path="/trends" />
+      <SideBarRow
+        Icon={SubscriptionsIcon}
+        title="Subscription"
+        path="/subscribes"
+      />
       <hr />
-      <SideBarRow Icon={VideoLibraryIcon} title="Library" />
-      <SideBarRow Icon={HistoryIcon} title="History" />
-      <SideBarRow Icon={OndemandVideoIcon} title="Your videos" />
-      <SideBarRow Icon={WatchLaterIcon} title="Watch later" />
-      <SideBarRow Icon={ThumbUpIcon} title="Liked vides" />
+      <SideBarRow Icon={VideoLibraryIcon} title="Library" path="/library" />
+      <SideBarRow Icon={HistoryIcon} title="History" path="/history" />
+      <SideBarRow Icon={OndemandVideoIcon} title="Your videos" path="" />
+      <SideBarRow Icon={WatchLaterIcon} title="Watch later" path="" />
+      <SideBarRow Icon={ThumbUpIcon} title="Liked vides" path="" />
       <hr />
       <p className={styles.subtitle}>MORE FROM YOUTUBE</p>
-      <SideBarRow Icon={YouTubeIcon} title="Youtube Premium" />
-      <SideBarRow Icon={LocalMoviesIcon} title="Movies" />
-      <SideBarRow Icon={VideogameAssetIcon} title="Games" />
-      <SideBarRow Icon={LiveTvIcon} title="Live broadcasts" />
-      <SideBarRow Icon={SportsIcon} title="Sport" />
-      <SideBarRow Icon={SettingsIcon} title="Settings" />
-      <SideBarRow Icon={FlagOutlinedIcon} title="Complaints history" />
+      <SideBarRow Icon={YouTubeIcon} title="Youtube Premium" path="" />
+      <SideBarRow Icon={LocalMoviesIcon} title="Movies" path="" />
+      <SideBarRow Icon={VideogameAssetIcon} title="Games" path="" />
+      <SideBarRow Icon={LiveTvIcon} title="Live broadcasts" path="" />
+      <SideBarRow Icon={SportsIcon} title="Sport" path="" />
+      <SideBarRow Icon={SettingsIcon} title="Settings" path="" />
+      <SideBarRow Icon={FlagOutlinedIcon} title="Complaints history" path="" />
     </div>
   );
 };

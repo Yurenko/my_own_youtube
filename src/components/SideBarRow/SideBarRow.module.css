@@ -3,6 +3,9 @@
   align-items: center;
   padding: 0 24px;
   height: 40px;
+  width: 190px;
+  color: #000;
+  text-decoration: none;
 }
 
 .sidebarrowIcon {
@@ -20,14 +23,14 @@
 
 .sidebarrow:hover {
   background-color: lightgray;
-  width: 175px;
+  width: 190px;
   cursor: pointer;
 }
 
 .sidebarrow.selected {
   font-weight: 400;
   background-color: lightgray;
-  width: 175px;
+  width: 190px;
 }
 
 .sidebarrow.selected > .sidebarrowIcon {
