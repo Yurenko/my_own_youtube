@@ -17,7 +17,7 @@ export interface IVideoPlayer {
   isError: boolean;
 }
 
-const initialState: IVideoPlayer = {
+const initialState = {
   videoInfo: {
     title: "",
     description: "",
@@ -34,7 +34,7 @@ const initialState: IVideoPlayer = {
 };
 
 export const videoPlayer = (
-  state = initialState,
+  state: IVideoPlayer = initialState,
   { type, payload }: AnyAction
 ) => {
   switch (type) {

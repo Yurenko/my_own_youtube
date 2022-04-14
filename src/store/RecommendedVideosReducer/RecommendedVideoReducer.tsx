@@ -8,14 +8,14 @@ interface InitialVideo {
   isError: boolean;
 }
 
-const InitialState: InitialVideo = {
+const InitialState = {
   videoCards: [],
   isLoading: true,
   isError: false,
 };
 
 export const recommendedVideos = (
-  state = InitialState,
+  state: InitialVideo = InitialState,
   { type, payload }: AnyAction
 ) => {
   switch (type) {

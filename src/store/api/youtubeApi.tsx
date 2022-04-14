@@ -39,3 +39,15 @@ export const searchVideo = (
     `search?part=snippet&maxResults=${result}&type=${type}&q=${searchQuery}&safeSearch=none&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
   );
 };
+
+export const searchVideoById = (result: number, id: string) => {
+  return instance.get(
+    `search?part=snippet&maxResults=${result}&channelId=${id}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+};
+
+export const channelInfo = (part: string, channelId?: string) => {
+  return instance.get(
+    `channels?part=${part}&id=${channelId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+  );
+};

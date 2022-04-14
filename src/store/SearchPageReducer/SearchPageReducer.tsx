@@ -6,6 +6,20 @@ import {
 } from "./SearchPageActions";
 import { AnyAction } from "redux";
 
+interface IinitialState {
+  channelRow: {
+    channelId: string;
+    image: string;
+    title: string;
+    subs: string;
+    noOfVideos: string;
+    description: string;
+  };
+  videoRows: Array<object>;
+  isLoading: boolean;
+  isError: boolean;
+}
+
 const initialState = {
   channelRow: {
     channelId: "",
@@ -21,7 +35,7 @@ const initialState = {
 };
 
 export const searchPage = (
-  state = initialState,
+  state: IinitialState = initialState,
   { type, payload }: AnyAction
 ) => {
   switch (type) {
