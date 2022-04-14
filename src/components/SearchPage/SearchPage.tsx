@@ -69,14 +69,19 @@ const SearchPage = () => {
       ) : null}
       <hr />
       {!isLoading ? (
-        <ChannelRow
-          key={channelRow.channelId}
-          image={channelRow.image}
-          title={channelRow.title}
-          subs={channelRow.subs}
-          noOfVideos={channelRow.noOfVideos}
-          description={channelRow.description}
-        />
+        <Link
+          to={`/channel/${channelRow.channelId}`}
+          className={styles.videoRow}
+        >
+          <ChannelRow
+            key={channelRow.channelId}
+            image={channelRow.image}
+            title={channelRow.title}
+            subs={channelRow.subs}
+            noOfVideos={channelRow.noOfVideos}
+            description={channelRow.description}
+          />
+        </Link>
       ) : null}
       <hr />
       {videoRows.map((item: ICreateVideoRow) => {

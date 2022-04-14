@@ -1,0 +1,54 @@
+.channelPage {
+  flex: 0.82;
+  background-color: #f9f9f9;
+  padding-bottom: 0;
+}
+
+.channelBanner {
+  height: calc((100vw - 240px) / 6.2 - 1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+}
+
+.headerContainer {
+  padding: 20px 20px;
+}
+
+.header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 24px 0 0;
+  flex: none;
+  border-radius: 50%;
+}
+
+.innerChannel {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  width: 100%;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.headerSubtitle {
+  font-size: medium;
+  color: gray;
+  margin: 0;
+  font-size: 15px;
+}

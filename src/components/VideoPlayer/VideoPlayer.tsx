@@ -51,7 +51,7 @@ const VideoPlayer = () => {
           {isLoading ? (
             <CircularProgress className="loading" color="secondary" />
           ) : (
-            <Video videoId={videoId} />
+            <Video videoId={videoId} opts={{ height: "500", width: "100%" }} />
           )}
         </div>
         <div className={styles.videoplayerVideoinfo}>

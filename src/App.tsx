@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import { Fragment } from "react";
 import SearchPage from "./components/SearchPage/SearchPage";
+import ChannelPage from "./components/ChannelPage/ChannelPage";
 
 function App() {
   return (
@@ -21,6 +22,15 @@ function App() {
                 <div className={styles.appMainpage}>
                   <SideBar />
                   <SearchPage />
+                </div>
+              }
+            />
+            <Route
+              path="/channel/:channelId"
+              element={
+                <div className={styles.appMainpage}>
+                  <SideBar />
+                  <ChannelPage />
                 </div>
               }
             />

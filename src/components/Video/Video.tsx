@@ -1,11 +1,14 @@
 import YouTube from "react-youtube";
-import { VideoParams } from "../VideoPlayer/VideoPlayer";
 
-const Video: React.FC<VideoParams> = ({ videoId }) => {
-  const opts = {
-    height: "500",
-    width: "100%",
+interface iVideo {
+  videoId?: string;
+  opts: {
+    height: string;
+    width: string;
   };
+}
+
+const Video: React.FC<iVideo> = ({ videoId, opts }) => {
   return (
     <div>
       <YouTube videoId={videoId} opts={opts} />
