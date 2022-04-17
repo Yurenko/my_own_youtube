@@ -18,6 +18,15 @@ interface IinitialState {
     };
     subscriberCount: string | null;
   };
+  ownVideos: {
+    videoId: string;
+    channelId: string;
+    description: string;
+    image: string;
+    title: string;
+    channel: string;
+    timestamp: string;
+  };
   isLoading: boolean;
   isError: boolean;
 }
@@ -33,6 +42,15 @@ const initialState = {
       },
     },
     subscriberCount: "",
+  },
+  ownVideos: {
+    videoId: "",
+    channelId: "",
+    description: "",
+    image: "",
+    title: "",
+    channel: "",
+    timestamp: "",
   },
   isLoading: true,
   isError: false,

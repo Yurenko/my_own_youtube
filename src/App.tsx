@@ -26,7 +26,7 @@ function App() {
               }
             />
             <Route
-              path="/channel/:channelId"
+              path="/channel/:channelId/*"
               element={
                 <div className={styles.appMainpage}>
                   <SideBar />

@@ -1,5 +1,5 @@
 .channelPage {
-  flex: 0.82;
+  width: 100%;
   background-color: #f9f9f9;
   padding-bottom: 0;
 }
@@ -16,8 +16,14 @@
   width: 100%;
 }
 
+.containerChannel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .headerContainer {
-  padding: 20px 20px;
+  padding: 20px 20px 0;
+  background-color: #f9f9f9;
 }
 
 .header {

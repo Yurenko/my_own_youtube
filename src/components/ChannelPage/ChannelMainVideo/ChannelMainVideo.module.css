@@ -1,0 +1,45 @@
+.wrapper {
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainVideo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 24px 20px;
+}
+.video {
+  margin-right: 24px;
+}
+
+.information {
+  max-width: 400px;
+}
+
+.title {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.views {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.description {
+  color: #030303;
+}
+
+.more {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
