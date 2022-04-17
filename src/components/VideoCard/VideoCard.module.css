@@ -1,11 +1,9 @@
 .videocard {
-  width: 250px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .videocardImage {
-  height: 140px;
-  width: 250px;
+  width: 100%;
 }
 
 .videocardInfo {
@@ -15,7 +13,6 @@
 
 .videocardText {
   margin-right: 24px;
-  height: 118px;
 }
 
 .videocardText > h4 {

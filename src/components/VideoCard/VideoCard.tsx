@@ -12,7 +12,7 @@ const VideoCard: React.FC<IVideoCards> = ({
 }) => {
   return (
     <div className={styles.videocard}>
-      <img className={styles.videocardImage} src={image} alt="" />
+      <img className={styles.videocardImage} src={image} alt={title} />
       <div className={styles.videocardInfo}>
         <Avatar
           className={styles.videocardAvatar}

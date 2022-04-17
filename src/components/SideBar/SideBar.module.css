@@ -1,16 +1,15 @@
 .sidebar {
-  flex: 0.18;
+  width: 240px;
   padding: 12px 0;
   margin: 0;
-  /* width: 240px; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* position: absolute;
   top: 56px;
   bottom: 0; */
 }
 
 .sidebar:hover {
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .sidebar::-webkit-scrollbar {

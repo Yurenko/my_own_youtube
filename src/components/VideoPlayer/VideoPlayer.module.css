@@ -4,16 +4,17 @@
 }
 
 .videoplayerVideodetails {
-  flex: 0.8;
+  width: 80%;
 }
 
 .videoplayerVideo,
 .videoplayerVideoinfo {
-  margin: 3% 5% 5% 8%;
+  margin: 3% 5% 5% 5%;
 }
 
 .videoplayerSuggested {
-  flex: 0.2;
+  width: 20%;
+  padding-right: 30px;
   margin-top: 0 !important;
 }
 

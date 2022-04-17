@@ -23,7 +23,13 @@ export interface IVideoCards {
   channelImage: string;
 }
 
-const RecommendedVideos = () => {
+interface IRecommendedVideos {
+  isSelectedVideo?: boolean;
+}
+
+const RecommendedVideos: React.FC<IRecommendedVideos> = ({
+  isSelectedVideo,
+}) => {
   const dispatch = useDispatch();
   const { videoCards, isLoading, isError } =
     UseAppSelector(getRecommendedVideos);
@@ -41,7 +47,7 @@ const RecommendedVideos = () => {
 
   if (isError) {
     return (
-      <Stack sx={{ flex: 0.8 }}>
+      <Stack sx={{ width: "100%" }}>
         <Alert severity="error">
           <AlertTitle>Error</AlertTitle>
           Video <strong>not</strong> found!
@@ -50,7 +56,13 @@ const RecommendedVideos = () => {
     );
   }
   return (
-    <div className={styles.recommendedvideos}>
+    <div
+      className={
+        isSelectedVideo
+          ? styles.recommendedvideosSelected
+          : styles.recommendedvideos
+      }
+    >
       <div className={styles.recommendedvideosVideos}>
         {(isLoading ? Array.from(new Array(12)) : videoCards).map(
           (item: IVideoCards) => (
@@ -59,7 +71,9 @@ const RecommendedVideos = () => {
                 <Link
                   key={item.videoId}
                   to={`/video/${item.videoId}`}
-                  className={styles.linkVideo}
+                  className={
+                    isSelectedVideo ? styles.isSelectedVideo : styles.linkVideo
+                  }
                 >
                   <VideoCard
                     key={item.videoId}

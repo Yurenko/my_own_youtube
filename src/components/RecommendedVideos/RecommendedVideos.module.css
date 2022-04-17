@@ -1,9 +1,9 @@
 .recommendedvideos {
-  flex: 0.82;
+  width: 100%;
   background-color: #f9f9f9;
-  padding: 20px 20px;
+  padding: 20px 5%;
   padding-bottom: 0;
-  overflow: scroll;
+  /* overflow: scroll; */
   /* position: absolute;
   top: 56px;
   bottom: 0;
@@ -26,6 +26,7 @@
 }
 
 .linkVideo {
+  width: 24%;
   text-decoration: none;
   color: #000;
 }
@@ -39,4 +40,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.recommendedvideosSelected {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 0;
+  padding-bottom: 0;
+}
+
+.isSelectedVideo {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
 }
