@@ -41,7 +41,7 @@ export const createVideoCards =
 
       const response = await videoCardsAPI(channelId);
 
-      const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
+      const channelImage = response[0].snippet.thumbnails.medium.url;
 
       newVideoCards.push({
         videoId,

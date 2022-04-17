@@ -31,8 +31,8 @@ export const getVideoPlayer =
     await videoInfoAPI(videoId)
       .then((response) => {
         const dataVideo: IVideo = {
-          snippet: response.data["items"][0].snippet,
-          statistics: response.data["items"][0].statistics,
+          snippet: response[0].snippet,
+          statistics: response[0].statistics,
         };
         dispatch(createVideoInfo(dataVideo));
         dispatch(isErrorAction(false));
@@ -66,8 +66,8 @@ const createVideoInfo =
     const dislikeCount = stats.dislikeCount;
     const response = await videoChanelAPI(channelId);
 
-    const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
-    const subs = response.data.items[0].statistics.subscriberCount;
+    const channelImage = response[0].snippet.thumbnails.medium.url;
+    const subs = response[0].statistics.subscriberCount;
     const newVideoInfo = {
       title,
       description,

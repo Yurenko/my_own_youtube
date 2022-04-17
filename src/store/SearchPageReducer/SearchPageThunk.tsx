@@ -45,10 +45,10 @@ export const fetchSearchPage =
       dispatch(videoRowsAction([]));
       const responseSearchVideo = await searchVideo(1, "channel", searchQuery);
 
-      dispatch(createChannelRow(responseSearchVideo.data["items"][0]));
+      dispatch(createChannelRow(responseSearchVideo[0]));
 
       const responseVideoRows = await searchVideo(20, "video", searchQuery);
-      dispatch(createVideoRows(responseVideoRows.data["items"]));
+      dispatch(createVideoRows(responseVideoRows));
       dispatch(isErrorAction(false));
     } catch (error) {
       console.log(error);
@@ -63,8 +63,8 @@ const createChannelRow =
     try {
       const channelId = channel.id.channelId;
       const response = await videoChanelAPI(channelId);
-      const noOfVideos = response.data.items[0].statistics.videoCount;
-      const subs = response.data.items[0].statistics.subscriberCount;
+      const noOfVideos = response[0].statistics.videoCount;
+      const subs = response[0].statistics.subscriberCount;
       const snippet = channel.snippet;
       const title = snippet.title;
       const description = snippet.description;
@@ -93,7 +93,7 @@ const createVideoRows =
       for (const video of videos) {
         const videoId = video.id.videoId;
         const response = await videoInfoAPI(videoId);
-        const views = response.data.items[0].statistics.viewCount;
+        const views = response[0].statistics.viewCount;
         const snippet = video.snippet;
         const title = snippet.title;
         const timestamp = DateTime.fromISO(snippet.publishedAt).toRelative();
